@@ -17,3 +17,10 @@ exports.requests = (req, res) => {
         res.status(200).send({ message: "Anfrage wurde verschickt!" });
         });
 };
+
+exports.userRequests = async (req, res) => {
+  console.log("received something")
+    const userRequest = await Vacationrequest.find({ username : req.body.username }).exec();
+    res.status(200).json(userRequest);
+ 
+}

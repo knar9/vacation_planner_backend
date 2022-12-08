@@ -9,4 +9,5 @@ module.exports = function(app) {
       next();
     });
     app.post("/api/vacationdates/requests", controller.requests);
+    app.post("/api/vacationdates/userRequests/:username", controller.userRequests);
 };
