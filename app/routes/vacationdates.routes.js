@@ -10,5 +10,5 @@ module.exports = function(app) {
     });
     app.post("/api/vacationdates/requests", controller.requests);
     app.post("/api/vacationdates/userRequests/:username", controller.userRequests);
-    app.post("/api/vacationdates/allRequests", controller.allRequests);
+    app.get("/api/vacationdates/allRequests", controller.allRequests);
 };
